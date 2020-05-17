@@ -1,0 +1,47 @@
+*** To get weather information for all cities | Type: Query
+{
+  weatherInfos{
+    city,
+    minTemp,
+    maxTemp,
+    averageTemp,
+    dewPoint,
+    humidity,
+    day,
+    month,
+    year
+  }
+}
+
+
+*** To get weather information for Specific city | Type: Query
+{
+  weatherInfoByCity(cityName: "Agra"){
+    city,
+    minTemp,
+    maxTemp,
+    averageTemp,
+    dewPoint,
+    humidity,
+    day,
+    month,
+    year
+  }
+
+*** Add new weather information | Type: Mutation
+
+mutation{
+  createWeatherInfo(dateTime:"2020-05-17T00:00:00Z", minTemp:23, maxTemp:40, city:"Indore"){
+    iD,
+    city,
+    maxTemp,
+    minTemp,
+    averageTemp,
+    date,
+    day,
+    month  
+  }
+}
+
+
+}
